@@ -1,0 +1,38 @@
+.section-home {
+  padding-top: 60px;
+  padding-bottom: 90px;
+  &.section-products {
+     padding-bottom: 390px;
+    &__2 {
+      padding-bottom: 80px;
+    }
+  }
+}
+.section-title {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  h2, h3 {
+    font-size: 2.2em;
+    line-height:1.35em;
+    margin:0;
+  }
+  &.c-white {
+    h2, h3 {
+      color:#fff;
+    }
+  }
+}
+.section-products {
+  z-index:0;
+}
+
+.section-advantages,
+.section-products {
+  background-color: #f6f6f6;
+  &__2 {
+    background-color: transparent;
+  }
+}
+.section-categories {
+  background-color: #fff;
+}

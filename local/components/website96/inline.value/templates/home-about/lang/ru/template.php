@@ -1,0 +1,3 @@
+<?
+$MESS['CATEGORIES_SECTION_LINK_DEFAULT'] = 'Подробнее';
+?>

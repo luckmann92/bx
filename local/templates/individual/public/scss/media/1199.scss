@@ -1,0 +1,52 @@
+@media screen and (min-width:320px) and (max-width:1199px) {
+  /* BODY */
+  body {
+    font-size:.95em;
+    line-height: 1.4;
+  }
+  .settings__panel-show {
+    display:none;
+  }
+
+  /* HEADER */
+  .header-logo {
+    max-width:190px;
+  }
+  .header-top_navbar {
+    li {
+      margin-right: 20px;
+      a {
+        font-size:14px;
+      }
+    }
+  }
+
+  /* CATALOG HOME SECTION */
+  .container-section {
+    grid-template-columns: repeat(4,210px);
+    grid-template-rows: 216px 216px;
+
+    -ms-grid-columns: 210px 30px 210px 30px 210px 30px 210px;
+    -ms-grid-rows: 216px 30px 216px;
+    &.catalog-section {
+      grid-template-columns: repeat(3,210px);
+    }
+  }
+  .sub__category-image {
+    flex: 0 1 150px;
+    overflow: hidden;
+    align-items: center;
+  }
+
+  /* ALBUM MODAL */
+  .slider-main {
+    margin-left: 90px;
+    margin-right: 90px;
+  }
+  .slider-nav {
+    padding-left: 90px;
+  }
+
+  /* REVIEWS */
+
+}

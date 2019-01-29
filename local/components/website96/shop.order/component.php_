@@ -1,0 +1,37 @@
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+
+CModule::IncludeModule("iblock");
+$el = new CIBlockElement();
+
+if (is_array($_SESSION['CartItems'])) {
+    $arItems = $_SESSION['CartItems'];
+} else {
+    $arItems = array();
+}
+
+if (!empty($arItems)) {
+    $arFilter = array('IBLOCK_CODE' => 'catalog');
+    $arOrder = array('ID', 'IBLOCK_ID', 'NAME', 'DETAIL_PAGE_URL', 'PREVIEW_PICTURE',
+        'PROPERTY_PRODUCT_PRICE', 'PROPERTY_PRODUCT_OLD_PRICE');
+    $arProducts = array();
+    foreach ($arItems as $id => $product) {
+        $arFilter['ID'] = $id;
+        $res = $el->GetList(array(), $arFilter, false, false, $arOrder);
+
+        while ($ar = $res->GetNext()) {
+            $arProducts[$ar['ID']] = $ar;
+            $arProducts[$ar['ID']]['QUANTITY'] = $arItems[$ar['ID']]['quantity'];
+            $arProducts[$ar['ID']]['SUMM'] = $ar['PROPERTY_PRODUCT_PRICE_VALUE'] * $arProducts[$ar['ID']]['QUANTITY'];
+            if ($ar['PREVIEW_PICTURE']) {
+                $img = CFile::ResizeImageGet(
+                    $ar['PREVIEW_PICTURE'],
+                    array('width' => 90, 'height' => 93),
+                    BX_RESIZE_IMAGE_PROPORTIONAL_ALT, true);
+                $arProducts[$ar['ID']]['PREVIEW_PICTURE'] = $img['src'];
+            }
+        }
+    }
+    $arResult['ITEMS'] = $arProducts;
+}
+
+$this->IncludeComponentTemplate();

@@ -1,0 +1,61 @@
+.product__list {
+  margin-bottom: -50px;
+}
+.product__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  transition: 50ms;
+  cursor:pointer;
+  &:hover, &:focus {
+    text-decoration: none;
+    transition: 300ms;
+    .product__item-image {
+      &:before, &:after {
+        opacity: 0.4;
+        transition: 300ms;
+      }
+    }
+    .product__item-link {
+      position:relative;
+      display: flex;
+      text-decoration: none;
+      justify-content: center;
+      align-items: center;
+      transition: 300ms;
+      &:before {
+        content:'Подробнее';
+        display: inline-block;
+        position:absolute;
+        line-height:45px;
+        border-radius: 25px;
+        background-color: #ff223d;
+        text-decoration: none;
+        padding-left: 30px;
+        padding-right:30px;
+        color:#fff;
+        z-index:5;
+      }
+      img {
+        opacity: 0.4;
+        transition: 30ms;
+      }
+    }
+    .product__item-name {
+      color:#ff223d;
+      transition: 300ms;
+    }
+  }
+}
+.price__new {
+  font-size:1.15em;
+}
+.price__old {
+  font-size: .8em;
+  padding-left:15px;
+  margin-bottom:1px;
+  text-decoration: line-through;
+  color:#aaa9ad;
+}

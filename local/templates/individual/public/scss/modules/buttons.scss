@@ -1,0 +1,138 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  line-height: 16px;
+  padding:0;
+  border-radius:25px;
+  transition: 250ms;
+  cursor: pointer;
+  &:after, &:before {
+    transition: 250ms;
+  }
+  &:hover, &:focus, &:active {
+    &:after, &:before {
+      transition: 400ms;
+    }
+    transition: 400ms;
+    text-decoration:none;
+  }
+}
+.btn-default {
+  border: 2px solid #ff223d;
+  color:#ff223d;
+  font-size: 14px;
+  padding: 12px 27px;
+  svg {
+    path {
+      fill:#ff223d;
+    }
+  }
+  &:hover, &:focus, &:active {
+    color:#fff;
+    background-color:#ff223d;
+    svg {
+      path {
+        fill:#fff;
+      }
+    }
+  }
+}
+.btn-primary {
+  border: 2px solid #ff223d;
+  background-color:#ff223d;
+  color:#fff;
+  font-size: 14px;
+  padding: 12px 27px;
+  svg {
+    path {
+      fill:#fff;
+    }
+  }
+  &:hover, &:focus, &:active {
+    color:#ff223d;
+    background-color:transparent;
+    svg {
+      path {
+        fill:#ff223d;
+      }
+    }
+  }
+}
+
+.btn-link {
+  color:#ff223d;
+  padding-right: 55px;
+  &:after, &:before {
+    position: absolute;
+    content: '';
+    display: block;
+  }
+  &:before {
+    width:28px;
+    height:2px;
+    bottom:8px;
+    background:#ff223d;
+    border-radius: 0 50% 50% 0;
+    right:0;
+  }
+  &:after {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 0 4px 6px;
+    border-color: transparent transparent transparent #ff223c;
+    bottom:5px;
+    right:-1px;
+  }
+  &:hover, &:focus, &:active {
+    color:#333;
+    &:before {
+      background:#333;
+    }
+    &:after {
+      border-color: transparent transparent transparent #333;
+    }
+  }
+}
+.btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width:2px;
+  border-style: solid;
+  border-color:#ff223d;
+  width:46px;
+  height:46px;
+  border-radius: 50%;
+  svg {
+    path {
+      fill:#ff223d;
+    }
+  }
+}
+.c-white {
+  .btn-link {
+    &:hover, &:focus, &:active {
+      color:#fff;
+      &:before {
+        background:#fff;
+      }
+      &:after {
+        border-color: transparent transparent transparent #fff;
+      }
+    }
+  }
+}
+.btn {
+  &.b-dark {
+    &:hover, &:focus, &:active {
+      color:#fff;
+      border-color:#333;
+      background:#333;
+    }
+  }
+}

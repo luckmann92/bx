@@ -1,0 +1,522 @@
+.cart__panel-show {
+  position: fixed;
+  display: inline-block;
+  width:60px;
+  height: 60px;
+  right:0px;
+  top:60px;
+  background-color: #FF223D;
+  border: none;
+  border-radius: 30px 0 0 30px;
+  cursor:pointer;
+  z-index: 99;
+}
+.cart__panel-show:before {
+  content: '';
+  position: absolute;
+  background-image: url(../images/icons/cart.png);
+  background-position: 23px 50%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.cart__panel .cart__panel-show {
+  position: absolute;
+  right: auto;
+  left: -60px;
+  top:60px;
+}
+.cart__items {
+  &-count {
+    background-color: #fff;
+    border-radius: 100%;
+    font-size: 10px;
+    font-weight: 500;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    color: #FF223D;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 12px;
+    right: 8px;
+  }
+}
+.cart__panel {
+  position: relative;
+  background: #fff;
+  z-index: 99;
+  width: 100%;
+  max-width: 690px;
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 10px 30px rgba(51,51,51,.4);
+  &-form {
+    width: 100%;
+  }
+  &-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  &-close {
+    background: url(../images/icons/crest.png) center center no-repeat;
+    width: 15px;
+    height: 15px;
+    position: static;
+  }
+  &-title {
+    font-size: 24px;
+    margin: 0;
+    font-weight: 700;
+  }
+  &-tablehead {
+    display: flex;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #EAEAEA;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  &-colname:first-child {
+    flex: 0 1 360px;
+  }
+  &-colname:nth-child(2) {
+    flex: 0 1 145px;
+  }
+  &-colname:last-child {
+    flex: 0 1 65px;
+  }
+  &-outer {
+    padding: 10px 15px;
+    margin: -10px -15px;
+  }
+  &-item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 10px;
+    transition: .3s;
+  }
+  &-outer:hover {
+    .cart__panel-item {
+      background-color: #F6F6F6;
+    }
+    .cart__panel-del {
+      display: block;
+    }
+  }
+  &-del {
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    border: none;
+    background: #333333 url(../images/icons/crest-min.png) center center no-repeat;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding: 0;
+    cursor: pointer;
+    display: none;
+  }
+  &-left {
+    display: flex;
+    align-items: center;
+    flex: 0 1 360px;
+  }
+  &-pic {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #fff;
+    border: 1px solid #EAEAEA;
+    height: 95px;
+    width: 95px;
+    margin-right: 20px;
+  }
+  &-infobox {
+    display: flex;
+    flex-direction: column;
+  }
+  &-name {
+    font-size: 14px;
+    max-width: 235px;
+  }
+  &-pricebox {
+    display: flex;
+    font-size: 16px;
+    align-items: flex-end;
+  }
+  &-price:after {
+    content: 'Р';
+    display: inline;
+    padding-left: 3px;
+    font-size: .85em;
+    font-family: 'ALSRubl-Verdana',Geometria,sans-sarif;
+  }
+  &-oldprice {
+    font-size: 14px;
+    color: #AAA9AD;
+    margin-left: 25px;
+    position: relative;
+  }
+  &-oldprice:before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: calc(100% + 18px);
+    background-color: #AAA9AD;
+    top: 49%;
+    left: -9px;
+  }
+  &-oldprice:after {
+    content: 'Р';
+    display: inline;
+    padding-left: 3px;
+    font-size: .85em;
+    color: #AAA9AD;
+    font-family: 'ALSRubl-Verdana',Geometria,sans-sarif;
+  }
+  &-itemprice {
+    width: 115px;
+    text-align: right;
+  }
+  &-itemprice:after {
+    content: 'Р';
+    display: inline;
+    padding-left: 3px;
+    font-size: .85em;
+    font-family: 'ALSRubl-Verdana',Geometria,sans-sarif;
+  }
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    border-bottom: 1px solid #EAEAEA;
+    border-top: 1px solid #EAEAEA;
+  }
+  &-clean {
+    color: #AAA9AD;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  &-totalprice {
+    font-size: 14px;
+  }
+  &-final {
+    font-size: 16px;
+    margin-left: 45px;
+  }
+  &-final:after {
+    content: 'Р';
+    display: inline;
+    padding-left: 3px;
+    font-size: .85em;
+    font-family: 'ALSRubl-Verdana',Geometria,sans-sarif;
+  }
+  &-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+}
+
+.quantity-box {
+    height: 40px;
+    width: 94px;
+    background-color: #F6F6F6;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+    .quantity-num {
+      width: 28px;
+      height: 100%;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      text-align: center;
+    }
+    .quantity-arrow-minus, .quantity-arrow-plus {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 1px solid black;
+      line-height: 9px;
+      text-align: center;
+      font-size: 16px;
+      background-color: transparent;
+      padding: 0px 0 1px 1px;
+      cursor: pointer;
+      margin-top: 2px;
+    }
+    .quantity-arrow-minus {
+      background: url(../images/icons/minus.png) center center no-repeat;
+    }
+    .quantity-arrow-plus {
+      background: url(../images/icons/plus.png) center center no-repeat;
+    }
+}
+
+.cart__container {
+  width: 100%;
+}
+.cart__panel-content {
+  display: none;
+  width: 100%;
+  background: #fff;
+  padding: 60px 55px;
+}
+.cart__panel-content.active {
+  display: flex;
+  flex-direction: column;
+}
+.box__modal-cart {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  .animated {
+    animation-duration:300ms;
+  }
+}
+
+.right-panel {
+  overflow-x: hidden;
+  display: flex;
+  justify-content: flex-end;
+  .arcticmodal-container_i {
+    margin: inherit;
+  }
+}
+
+.cart__page {
+  &-top {
+    margin-bottom: 25px;
+    padding: 0;
+  }
+  &-subtitle {
+    font-weight: bold;
+    font-size: 24px;
+  }
+  &-change {
+    color: #AAA9AD;
+  }
+  &-inner {
+    padding: 0;
+  }
+  &-outer {
+    padding: 10px 15px;
+    margin: -10px -15px;
+  }
+  &-item {
+    margin-bottom: 30px;
+    position: relative;
+    transition: .3s;
+  }
+  &-outer:hover {
+    .cart__page-item {
+      background-color: #F6F6F6;
+    }
+    .cart__page-del {
+      display: block;
+    }
+  }
+  &-del {
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    border: none;
+    background: #333333 url(../images/icons/crest-min.png) center center no-repeat;
+    position: absolute;
+    left: -12px;
+    top: -10px;
+    padding: 0;
+    cursor: pointer;
+    display: none;
+  }
+  &-pic {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #fff;
+    border: 1px solid #EAEAEA;
+    height: 95px;
+    width: 95px;
+    margin-right: 30px;
+  }
+  &-col {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  &-colname {
+    flex: 1 1 455px;
+  }
+  &-colprice {
+    flex: 1 1 225px;
+  }
+  &-colquant {
+    flex: 1 1 197px;
+  }
+  &-colsum {
+    flex: 1 1 132px;
+  }
+  &-coltitle {
+    color: #AAA9AD;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  &-descrub:after {
+    content: 'Р';
+    display: inline;
+    padding-left: 3px;
+    font-size: .85em;
+    font-family: 'ALSRubl-Verdana',Geometria,sans-sarif;
+  }
+  &-bottom {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 0 80px 90px;
+    border-bottom: 1px solid #EAEAEA;
+    border-top: 1px solid #EAEAEA;
+    width: 100%;
+  }
+  &-total {
+    display: flex;
+  }
+  &-totaldesc {
+    font-size: 14px;
+  }
+  &-price {
+    margin-left: 160px;
+    width: 130px;
+  }
+  &-price:after {
+    content: 'Р';
+    display: inline;
+    padding-left: 3px;
+    font-size: .85em;
+    font-family: 'ALSRubl-Verdana',Geometria,sans-sarif;
+  }
+  &-formbox {
+    padding: 55px 0 65px;
+    border-bottom: 1px solid #EAEAEA;
+  }
+  &-infotitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 55px;
+  }
+  &-form {
+    .custom-dropdown__button {
+      padding: 15px 20px;
+      background-color: #f6f6f6;
+      border: 1px solid #f6f6f6;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      border-radius: 0;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+  }
+  &-inp {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #f6f6f6;
+    border: 1px solid #f6f6f6;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+  .custom-dropdown.custom-dropdown_active {
+    box-shadow: none;
+  }
+  .custom-dropdown__content {
+    box-shadow: none;
+    background: #F6F6F6;
+    font-size: 14px;
+  }
+
+  &-end {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+  &-checkbox {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+  &-checkbox:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 0;
+    top: 3px;
+    border: 1px solid #EAEAEA;
+  }
+  .cart__page-checkbox input[type=checkbox]:checked+.cart__page-checktext:before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    left: 10px;
+    top: 14px;
+    background: #FF223D;
+  }
+  &-checkbox input[type=checkbox] {
+    position: absolute;
+    left: -999px;
+    opacity: 0;
+  }
+  &-checktext {
+    position: relative;
+    display: block;
+    padding-left: 46px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .form-group {
+    position: relative;
+  }
+  .error-message {
+    color: red;
+    font-size: 10px;
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+  }
+  .error {
+    input, textarea, .cart__page-checkbox:before, .custom-dropdown__button {
+      border: 1px solid red;
+    }
+
+  }
+}
+
+input[type='number'] {
+  -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

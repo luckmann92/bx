@@ -1,0 +1,132 @@
+.reviews__list {
+  .section-title {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+.reviews-nav__list {
+  margin-top:40px;
+  margin-bottom: 40px;
+  padding-left:120px;
+  padding-right: 120px;
+}
+.review-nav__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom:7px;
+  &.slick-current {
+    .review-nav__image {
+      &:before,
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
+.review-nav__image {
+  position: relative;
+  display:block;
+  width:80px;
+  height:80px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background-size: cover;
+  cursor: pointer;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+  &:before {
+    top:0;
+    left:0;
+    border-radius: 50%;
+    border-width:4px;
+    width: 100%;
+    height:100%;
+    border-style:solid;
+    border-color:#ff223d;
+  }
+  &:after {
+    width: 0;
+    height: 0;
+    bottom:-7px;
+    left:calc(50% - 7px);
+    border-style: solid;
+    border-width: 9px 7px 0 7px;
+    border-color: #ff223c transparent transparent transparent;
+  }
+}
+.review__arrow  {
+  position: absolute;
+  top:0;
+  bottom:0;
+  display: block;
+  width:36px;
+  height:100%;
+  background-color: transparent;
+  border:none;
+  cursor:pointer;
+  &:after, &:before {
+    content: '';
+    position: absolute;
+    display: block;
+  }
+  &:before {
+    top:calc(50% - 4px);
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+  &:after {
+    top:calc(50% - 1px);
+    left:0;
+    right:0;
+    height:2px;
+    width:100%;
+    background: #ff223c;
+  }
+  &:hover, &:focus, &:active {
+    &:after {
+      background: #333;
+    }
+  }
+}
+.review__prev {
+  left:0;
+  &:before {
+    left:0;
+    border-width: 4px 6px 4px 0;
+    border-color: transparent #ff223c transparent transparent;
+  }
+  &:hover, &:focus, &:active {
+    &:before {
+      border-color: transparent #333 transparent transparent;
+    }
+  }
+}
+.review__next {
+  right:0;
+  &:before {
+    right:0;
+    border-width: 4px 0 4px 6px;
+    border-color: transparent transparent transparent #ff223c;
+  }
+  &:hover, &:focus, &:active {
+    &:before {
+      border-color: transparent transparent transparent #333;
+    }
+  }
+}
+.review-main__desc {
+  margin-bottom: 50px;
+}
+.review-client__name {
+  font-size: 18px;
+  color:#333;
+  font-weight: bold;
+}
+.review-client__optional {
+  color:#aaa9ad;
+}

@@ -1,0 +1,80 @@
+html {
+  font-size:  16px;
+  height: 100%;
+}
+body {
+  font-family: 'Geometria', sans-serif;
+  font-size:  1em;
+  line-height: 1.8;
+  color:#333;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+* {
+  box-sizing:border-box;
+  outline:none;
+}
+table {
+  max-width:100%;
+}
+a {
+  color:#ff223d;
+  text-decoration: none;
+  &:hover, &:focus {
+    text-decoration: underline;
+  }
+}
+div {
+  box-sizing: border-box;
+}
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 20px;
+}
+* {
+  outline:none;
+}
+p {
+  margin: 0 0 20px 0;
+}
+img {
+  width:auto;
+  max-width: 100%;
+}
+header {
+  background-color: #fff;
+}
+div.fancybox-overlay {
+  background: rgba(211, 211, 211, 0.9);
+}
+.img__pin {
+  width: 38%;
+  padding-left: 30px;
+  padding-bottom: 30px;
+}
+table {
+  border-spacing: 0;
+}
+.logo-circle {
+  fill: #ff223d;
+}
+
+.logo-circle {
+  fill: #ff223d;
+}
+
+.logo-font {
+  fill: #333;
+}
+
+.logo-font {
+  fill: #333;
+}

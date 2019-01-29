@@ -1,0 +1,44 @@
+@font-face {
+  font-family: 'Geometria';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Geometria-Regular'), url(../fonts/Geometria.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Geometria';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Geometria-Italic'), url(../fonts/Geometria-Italic.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Geometria';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Geometria-Medium'), url(../fonts/Geometria-Medium.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Geometria';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Geometria-MediumItalic'), url(../fonts/Geometria-MediumItalic.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Geometria';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Geometria-Bold'), url(../fonts/Geometria-Bold.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Geometria';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Geometria-BoldItalic'), url(../fonts/Geometria-BoldItalic.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'ALSRubl-Verdana';
+  src: url('../fonts/alsrubl-verdana-regular.eot');
+  src: url('../fonts/alsrubl-verdana-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/alsrubl-verdana-regular.woff') format('woff'), url('../fonts/alsrubl-verdana-regular.ttf') format('truetype'), url('../fonts/alsrubl-verdana-regular.svg#ALSRublRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

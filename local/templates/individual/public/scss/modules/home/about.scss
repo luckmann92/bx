@@ -1,0 +1,41 @@
+.section-about {
+  margin-top: -350px;
+  z-index:2;
+  &__2 {
+    margin-top:0;
+    .about-item {
+      border:1px solid #eaeaea;
+    }
+    .about-item__img {
+      height:320px;
+    }
+  }
+  &__company {
+    margin-top:60px;
+  }
+}
+.about-item_content {
+  padding:30px 80px 60px
+}
+.about-item {
+  position: relative;
+  background-color: #fff;
+  overflow: hidden;
+  z-index:1;
+  .section-title {
+    padding-bottom: 30px;
+  }
+}
+.about-item__text {
+  padding-bottom: 30px;
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.about-item__img {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

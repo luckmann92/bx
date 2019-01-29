@@ -1,0 +1,80 @@
+.btn-default,
+.header-top_navbar li a:hover,
+.header-top_navbar li a:focus,
+.header-top_navbar li a:active,
+.header-phone a:hover,
+.header-phone a:focus,
+.header-phone a:active,
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active,
+.btn-link,
+.news__item:hover .news__name span, .news__item:focus .news__name span, .news__item:active .news__name span,
+.product__item:focus .product__item-name, .product__item:hover .product__item-name, .product__item:active .product__item-name,
+.left__menu .catalog__menu>li>a:focus, .left__menu .catalog__menu>li>a:hover,
+.page-section ul li.active a,
+.page-section ul li:focus a,
+.page-section ul li:hover a,
+a {
+    color: #f75855;
+}
+.product-image__nav.slick-current:before,
+.product-image__nav:active:before,
+.product-image__nav:focus:before,
+.product-image__nav:hover:before,
+.product__tabs-head>li.active, .product__tabs-head>li:focus, .product__tabs-head>li:hover,
+.review-nav__image:before,
+.header-search .inp-search:active,
+.header-search .inp-search:focus,
+.search__page-panel .inp-search:active,
+.search__page-panel .inp-search:focus,
+.btn-search, .btn-search:hover, .btn-search:active, .btn-search:focus,
+.btn-primary,
+.btn-default,
+.btn-icon {
+    border-color: #f75855;
+}
+.header-bottom .catalog__menu li a:hover:before,
+.left__menu .catalog__menu>li.active>a,
+.review__arrow:after,
+.btn-search,
+.btn-primary,
+.btn-link:before,
+.product__item:focus .product__item-link:before, .product__item:hover .product__item-link:before,
+.btn-default:hover, .btn-default:active, .btn-default:focus {
+    background-color: #f75855;
+}
+.btn-icon svg path,
+.navN li.navn-next a svg path, .navN li.navn-prev a svg path,
+.btn-search:focus path, .btn-search:hover path, .btn-search:active path {
+    fill:#f75855;
+}
+.review-nav__image:after {
+    border-color: #f75855 transparent transparent;
+}
+.review__next:before,
+.btn-link:after {
+    border-color: transparent transparent transparent #f75855;
+}
+.review__prev:before {
+    border-color: transparent #f75855 transparent transparent;
+}
+
+header {
+    background: #d0d4de;
+}
+
+.header-bottom .catalog__menu li a {
+    color:#fff;
+}
+.header-top:before {
+    opacity: .1;
+}
+.header-bottom:before {
+    background:#474a53;
+    opacity: 1;
+}
+.header-search .inp-search, .search__page-panel .inp-search {
+    background: #fff;
+}
+.header-bottom .catalog__menu li a:hover:before {
+    opacity: 1;
+}

@@ -1,0 +1,57 @@
+// LIBS
+@import "../libs/normalize";
+@import "../libs/animate";
+
+@import "../libs/slick/slick";
+@import "../libs/arcticmodal/jquery.arcticmodal-0.3";
+@import "../libs/bootstrap/bootstrap-grid.min";
+@import "../libs/fancybox/jquery.fancybox";
+
+//MAIN STYLE
+@import "reset";
+@import "fonts";
+
+@import "modules/headers/header1";
+
+@import "modules/home/sections";
+
+@import "modules/home/slider";
+@import "modules/home/advantages";
+@import "modules/home/stocks";
+@import "modules/home/about";
+@import "modules/home/news";
+@import "modules/home/reviews";
+
+@import "modules/catalog/index";
+@import "modules/catalog/sections";
+@import "modules/catalog/element";
+@import "modules/catalog/detail";
+
+@import "modules/news/element";
+
+@import "modules/home";
+@import "modules/page";
+@import "modules/catalog";
+@import "modules/events";
+@import "modules/search";
+@import "modules/contacts";
+@import "modules/reviews";
+
+@import "modules/gallery/list";
+@import "modules/gallery/detail";
+
+@import "modules/buttons";
+@import "modules/modal";
+@import "modules/footer";
+
+//SYSTEM
+@import "system/panel";
+@import "system/cart";
+
+
+//MEDIA
+@import "modules/headers/responsive";
+@import "media/1199";
+@import "media/992";
+@import "media/768";
+@import "media/576";

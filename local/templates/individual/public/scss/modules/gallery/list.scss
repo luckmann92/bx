@@ -1,0 +1,12 @@
+.gallery-album__img {
+  position: relative;
+  background: transparent;
+  img {
+    &:last-child {
+      position:absolute;
+      top: 10px;
+      left: 10px;
+      z-index: -1;
+    }
+  }
+}

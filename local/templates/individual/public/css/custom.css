@@ -1,0 +1,11 @@
+.product__item-link {
+	height:260px;
+	background:#fff;
+}
+.table-responsive table {
+	border: 1px solid #efefef;
+	font-size:.8em;
+}
+.table-responsive table th {
+	background: #ccc;
+}

@@ -1,0 +1,454 @@
+.modal__box {
+  position: relative;
+  display:block;
+  width:690px;
+  padding:50px 60px;
+  background:#fff;
+  box-shadow: 0px 10px 30px rgba(51, 51, 51, 0.4);
+}
+.error {
+  .politic__text {
+    color:#f00;
+  }
+  .politic__checkbox {
+    &:before {
+      border-color:#f00;
+    }
+  }
+  & input, & textarea{
+    border:1px solid #f00;
+  }
+}
+.modal__close {
+  position:absolute;
+  display: block;
+  right:35px;
+  top:27px;
+  width:20px;
+  height:20px;
+  transition: 300ms;
+  cursor:pointer;
+  transform:rotate(0deg);
+  z-index: 2;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width:16px;
+    height:1px;
+    background-color: #333;
+  }
+  &:before {
+    top: calc(50% - .5px);
+    left: calc(50% - 8px);
+    transform: rotate(-45deg);
+  }
+  &:after {
+    top: calc(50% - .5px);
+    left: calc(50% - 8px);
+    transform: rotate(45deg);
+  }
+  &:hover, &:focus {
+    transform:rotate(90deg);
+    transition: 300ms;
+  }
+}
+.modal__box-title {
+  display:block;
+  color:#000;
+  font-size:24px;
+  font-weight: bold;
+  margin:0 0 30px;
+}
+.form__group {
+  margin-bottom: 30px;
+  &.form__group-btn {
+    margin-bottom: 0;
+  }
+}
+.form__group-btn {
+  display:flex;
+  justify-content: flex-end;
+}
+.modal__inp {
+  display:block;
+  width:100%;
+  border:none;
+  padding: 15px 20px;
+  background-color: #f6f6f6;
+  border:1px solid #f6f6f6;
+  box-sizing: border-box;
+}
+.textarea_inp {
+  resize: vertical;
+}
+.politic__checkbox {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 0;
+    top: 3px;
+    border: 1px solid #EAEAEA;
+  }
+  input[type="checkbox"]{
+    position: absolute;
+    left:-999px;
+    opacity: 0;
+    &:checked+.politic__text:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 10px;
+      height: 10px;
+      left: 10px;
+      top: 14px;
+      background: #FF223D;
+    }
+  }
+  .politic__text {
+    position: relative;
+    display:block;
+    padding-left: 45px;
+    font-size: 12px;
+  }
+}
+.loading__form {
+  position: relative;
+  display: block;
+  &:before {
+    content:'';
+    display:block;
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background-color: #fff;
+    opacity: 0.8;
+    z-index: 1;
+  }
+  .modal__content {
+    position: relative;
+    &:before, &:after {
+      content:'';
+      position:absolute;
+      display: block;
+      width:60px;
+      height:60px;
+      border-radius: 50%;
+      top:calc(50% - 50px);
+      left:calc(50% - 50px);
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+    &:before {
+      border-top:6px solid #333;
+      border-left:6px solid #333;
+      animation-name: circle__animate-left;
+      animation-duration: 1000ms;
+    }
+  }
+}
+.arcticmodal-container_i2 .arcticmodal-loading {
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    z-index: 1;
+}
+.arcticmodal-container_i2 .arcticmodal-loading + .callback__modal-form .modal__content{
+    opacity: .3;
+}
+.fancybox-nav {
+  height: 80%;
+  top:10%;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:28px;
+    width:28px;
+    transition: 50ms;
+    opacity: .5;
+    visibility: visible;
+    &:before {
+      content: '';
+      display: block;
+      width:18px;
+      height:18px;
+      border-top: 2px solid #333;
+      border-left: 2px solid #333;
+    }
+  }
+  &:hover, &:focus, &:active {
+    span {
+      opacity: 1;
+      transition: 300ms;
+    }
+  }
+  &.fancybox-prev {
+    span {
+      &:before {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+  &.fancybox-next {
+    span {
+      &:before {
+        transform: rotate(135deg);
+      }
+    }
+  }
+}
+.fancybox-close{
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -15px;
+  width:25px;
+  height:25px;
+  opacity: .5;
+  transition: 50ms;
+  &:before, &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top:calc(50% - 1px);
+    width:22px;
+    height:2px;
+    background-color: #333;
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+  &:hover, &:focus, &:active {
+    opacity: 1;
+    transition: 300ms;
+  }
+}
+#fancybox-loading {
+  z-index: 9999;
+  div {
+    width: 80px;
+    height: 80px;
+    background: #000 url(loading.gif) no-repeat 50% 50%;
+    border-radius: 10px;
+  }
+}
+.product__order-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.product__order-image {
+  display: inline-block;
+  width:150px;
+  height:150px;
+  flex: 0 0 150px;
+  border:1px solid #eaeaea;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  margin-right: 40px;
+}
+.product__order-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 300px;
+}
+.product__order-name {
+  font-size: 1em;
+  line-height: 1.4em;
+  margin-bottom: 5px;
+}
+.product__order-price {
+  font-size: 24px;
+  font-weight: bold;
+
+  &.price__not-value {
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+.product__order-buttons {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.modal__form-continue {
+  background-color: transparent;
+}
+.c-fz152__block {
+  position:fixed;
+  right:30px;
+  bottom:30px;
+  z-index: 1;
+}
+/* WB CUSTOM MODAL */
+.wb-modal {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+.wb-modal-overlay {
+  background: #d3d3d3;
+}
+.wb-modal-block {
+  position:relative;
+  width:100%;
+  height:100%;
+  padding-left: 230px;
+}
+.wb-modal-wrapper {
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height:100vh;
+}
+.slider-main {
+  position: relative;
+  flex-direction: column;
+  margin-left: 230px;
+  margin-right: 230px;
+  height:calc(100vh - 205px);
+}
+.slider-main_img {
+  width:100%;
+  max-width:1460px;
+  text-align: center;
+  img {
+    max-height: 100%;
+  }
+}
+.img__prev {
+  left:-66px;
+}
+.img__next {
+  right:-66px;
+}
+.slider-main_name {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+.slider-nav_img {
+  position: relative;
+  margin-left:15px;
+  margin-right:15px;
+  cursor:pointer;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+    opacity: .5;
+    transition: 300ms;
+  }
+  &:hover, &:active, &:focus, &.slick-current {
+    &:before {
+      opacity: 0;
+    }
+  }
+  span {
+    position: absolute;
+    width:30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    background-color: #fe223c;
+    font-size: 14px;
+    left:0;
+    bottom:0;
+  }
+}
+.slider-main_arrows {
+  position:absolute;
+}
+.wb-modal-close {
+  position: absolute;
+  top:0;
+  right:0;
+  display: flex;
+  width:50px;
+  height:50px;
+  background: #efedf0;
+  .modal__close {
+    width:50px;
+    height:50px;
+    top:0;
+    right:0;
+  }
+}
+.slider-nav {
+  position: relative;
+  width:100%;
+  padding-top: 33px;
+  padding-bottom: 33px;
+  padding-left: 230px;
+  background: #333333;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.slider-nav_img {
+  width:195px;
+  height:140px;
+}
+.wb-modal-loading {
+  position: fixed;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 98;
+}
+
+.fancybox-lock .fancybox-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fancybox-opened {
+ // max-width: 700px;
+  position: static!important;
+  //width: calc(100% - 100px)!important;
+}
+
+.fancybox-skin {
+  background: transparent;
+}
+
+.fancybox-outer {
+  display: flex;
+  justify-content: center;
+}
+
+.fancybox-inner {
+  width: calc(100% - 80px)!important;
+  height: auto!important;
+}
+.fancybox-close {
+  top: -35px;
+  right: 5px;
+}
